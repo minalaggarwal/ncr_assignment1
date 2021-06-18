@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    font-size: 14;
+}
+
+.container{
+height:100%;
+}
+.Search-tab
+{
+
+height:10vh;
+justify-content: center;
+
+
+}
+.dis{
+  background-color: rgb(179, 236, 236);
+  border-top: 2px;
+  border-style:groove;
+  
+}
+
+.List-tab
+{
+height:90vh;
+
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

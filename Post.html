@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="Post.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-tab">
+          <a href="Home.html"> <div class="material-icons home-icon">home</div></a>
+            <p>Back to Home</p>
+        </div>
+        <div class="Post-tab">
+            <table class="table table-stripped table-hover" id="mytable">
+                <thead>
+                    <tr>
+                        <th>User Id</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Body</th>
+                    </tr>
+                </thead>
+             <tbody id="data">
+             </tbody>
+            </table>
+           
+     </div>
+    </div>
+    <script>
+
+fetch("posts.json")
+.then(response => response.json())
+.then(data=>{console.log(data)
+  if(data.length>0)
+  {
+    var temp="";
+    data.forEach((u)=>{
+      temp+="<tr>";
+      temp+="<td>"+u.userId+"</td>";
+      temp+="<td>"+u.id+"</td>";
+      temp+="<td>"+u.title+"</td>";
+      temp+="<td>"+u.body+"</td></tr>";
+    })
+    document.getElementById("data").innerHTML=temp;
+  }
+})
+        </script>
+</body>
+</html>
